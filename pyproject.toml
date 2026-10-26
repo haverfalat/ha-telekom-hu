@@ -1,0 +1,29 @@
+[project]
+name = "telekom-hu"
+version = "0.1.0"
+description = "Experimental Hungarian Telekom mobile API client and reverse-engineering notes"
+readme = "README.md"
+authors = [
+    { name = "cukorfalat", email = "cukorfalat@senki" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28,<1",
+]
+
+[build-system]
+requires = ["uv_build>=0.10.4,<0.11.0"]
+build-backend = "uv_build"
+
+[project.scripts]
+telekom-hu = "telekom_hu.__main__:main"
+
+[project.optional-dependencies]
+browser = [
+    "playwright>=1.55,<2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8,<10",
+]

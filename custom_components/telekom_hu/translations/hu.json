@@ -1,0 +1,43 @@
+{
+  "title": "Magyar Telekom",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Telekom előfizetés csatlakoztatása",
+        "description": "Először futtasd a böngészős belépési segédet a számítógépeden, és lépj be a Telekom oldalán. Másold be a web-session.json tartalmát. Itt nem kell jelszót vagy SMS-kódot megadni. A munkamenet sütijeit a rendszer bizalmasan tárolja, és automatikusan megújítja, amíg a Telekom ezt engedélyezi.",
+        "data": {
+          "phone": "Mobiltelefonszám",
+          "session_json": "Munkamenet exportja (JSON)"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Jelentkezz be újra a Telekomba",
+        "description": "A Telekom munkamenete lejárt vagy visszavonták. Futtasd újra a belépési segédet, és másold be az új exportot. A meglévő érzékelők megmaradnak.",
+        "data": {
+          "session_json": "Új munkamenet (JSON)"
+        }
+      }
+    },
+    "error": {
+      "invalid_input": "Adj meg érvényes magyar telefonszámot és frissítési sütit tartalmazó JSON-exportot.",
+      "invalid_auth": "A munkamenet nem újítható meg. Jelentkezz be újra, és exportálj új munkamenetet.",
+      "account_mismatch": "Az előfizetés nem található ebben a fiókban, vagy nem választottál fiókot belépéskor.",
+      "cannot_connect": "A Telekom adatai nem érhetők el. Próbáld újra később."
+    },
+    "abort": {
+      "already_configured": "Ez az előfizetés már be van állítva.",
+      "reauth_successful": "A munkamenet frissítve, az érzékelők folytatják a működést."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Frissítés gyakorisága",
+        "description": "Alapértelmezés szerint 15 percenként kérdez le adatokat. A munkamenet szükség esetén automatikusan megújul.",
+        "data": {
+          "update_interval": "Lekérdezési időköz (perc)"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Magyar Telekom",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect your Telekom subscription",
+        "description": "First run the browser login helper on your computer and complete Telekom login. Paste the contents of web-session.json below. Your password and SMS code are not needed here. Rotating session cookies are saved privately and renewed automatically while Telekom permits it.",
+        "data": {
+          "phone": "Mobile phone number",
+          "session_json": "Session export (JSON)"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sign in to Telekom again",
+        "description": "Telekom expired or revoked the session. Run the browser login helper again and paste the new session export. Existing sensors will be kept.",
+        "data": {
+          "session_json": "New session export (JSON)"
+        }
+      }
+    },
+    "error": {
+      "invalid_input": "Enter a valid Hungarian mobile number and a session JSON export containing the refresh cookie.",
+      "invalid_auth": "This session cannot be renewed. Complete Telekom login again and export a new session.",
+      "account_mismatch": "This session does not contain that subscription, or no account was selected during login.",
+      "cannot_connect": "Cannot retrieve data from Telekom. Try again later."
+    },
+    "abort": {
+      "already_configured": "This subscription is already configured.",
+      "reauth_successful": "The session was updated. Existing sensors will resume."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Update frequency",
+        "description": "Poll every 15 minutes by default. Sessions renew automatically when needed.",
+        "data": {
+          "update_interval": "Polling interval (minutes)"
+        }
+      }
+    }
+  }
+}

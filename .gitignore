@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+dist/
+analysis/
+*.apk
+*.xapk
+.telekom/
+*.session.json
+*.capture.jsonl
